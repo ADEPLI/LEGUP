@@ -1,0 +1,3 @@
+* Checks that adding empty cell marks to (2,2), (0,2), and (4,3) does correctly satisfy the empty corners rule.
+* Checks that adding an empty cell mark to (4,5) does not get accepted as satisfying the rule, as it is skipping steps.
+* Checks that adding an empty cell mark to (4,1) does not falsely trigger the empty corners rule.
