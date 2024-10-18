@@ -14,7 +14,9 @@ Test Case 1 - Empty Corners Test:
 
 <img width="313" alt="EmptyCorners" src="https://github.com/user-attachments/assets/7ab00758-de97-4fda-88d5-08a5dba0abb3">
 
-* TODO: HERE
+* Checks that adding empty cell marks to (2,2), (0,2), and (4,3) does correctly satisfy the empty corners rule.
+* Checks that adding an empty cell mark to (4,5) does not get accepted as satisfying the rule, as it is skipping steps.
+* Checks that adding an empty cell mark to (4,1) does not falsely trigger the empty corners rule.
 
 ### Finish with Bulbs - LTUP-BASC-0003
 
