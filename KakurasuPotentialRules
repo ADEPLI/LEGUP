@@ -1,4 +1,19 @@
-Potential Direct/Basic Rule
-1. There is only one way, given the previously filled cells, to fill in a given row
-    a. RequiredSumRule
-2.
+Potential Direct/Basic Rules
+1. CompleteSumRule
+    a. There is only one way, given the previously filled cells, to mark the cells to reach the target sum
+2. FillInEmptiesRule
+    a. When the sum is equal to the target value, fill in the rest of the row/column with empties
+
+Potential Contradiction Rules
+1. ExceededSumRule/SumTooLargeRule
+    a. If the sum of the row/column exceeds the target value, this path is invalid
+    b. Could make it so even if the row/column isn't filled, the rule will still trigger as if the rest of the blank cells were empty
+    c. Needs you to be able to select an entire row/column
+2. IncompleteSumRule/SumTooSmallRule
+    a. If the row/column is filled but the sum is not equal to the target sum, this path is invalid
+    b. Could make it so even if the row/column isn't filled, the rule will still trigger as if the rest of the blank cells were filled
+    c. Also needs you to be able to select an entire row/column
+
+Potential Case Rules
+1. FilledOrEmptyCaseRule
+    a. Branches off into two states, one where it's filled and one where it's empty
