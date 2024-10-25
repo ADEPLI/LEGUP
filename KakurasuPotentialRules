@@ -2,11 +2,18 @@ Potential Direct/Basic Rules
 1. CompleteSumRule
     a. There is only one way, given the previously filled cells, to mark the cells to reach the target sum
 2. FillInEmptiesRule
-    a. When the sum is equal to the target value, fill in the rest of the row/column with empties
+    a. When the sum is equal to the target sum, fill in the rest of the row/column with empties
+3. RequiredFillRule
+    a. This cell must be filled in order for this row/column to potentially reach target sum
+    b. This rule would be triggered if on a 6x6 grid, the target sum was 18; everything other than 1, 2, and 3 must be filled
+        i. This is because the only way to have 3 less than the max of 21 is to remove 1 and 2, or just 3. Everything else must be filled.
+4. RequiredEmptyRule
+    a. This cell must be empty in order for this row/column to potentially reach target sum
+    b. This rule would be triggered if there was 5 missing from fulfilling the sum, and the 6 cell is blank
 
 Potential Contradiction Rules
 1. ExceededSumRule/SumTooLargeRule
-    a. If the sum of the row/column exceeds the target value, this path is invalid
+    a. If the sum of the row/column exceeds the target sum, this path is invalid
     b. Could make it so even if the row/column isn't filled, the rule will still trigger as if the rest of the blank cells were empty
     c. Needs you to be able to select an entire row/column
 2. IncompleteSumRule/SumTooSmallRule
