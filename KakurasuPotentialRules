@@ -15,11 +15,11 @@ Potential Contradiction Rules
 1. ExceededSumRule/SumTooLargeRule
     a. If the sum of the row/column exceeds the target sum, this path is invalid
     b. Could make it so even if the row/column isn't filled, the rule will still trigger as if the rest of the blank cells were empty
-    c. Needs you to be able to select an entire row/column
+    c. Needs you to be able to select an entire row/column (maybe)
 2. IncompleteSumRule/SumTooSmallRule
     a. If the row/column is filled but the sum is not equal to the target sum, this path is invalid
     b. Could make it so even if the row/column isn't filled, the rule will still trigger as if the rest of the blank cells were filled
-    c. Also needs you to be able to select an entire row/column
+    c. Also needs you to be able to select an entire row/column (maybe)
 
 Potential Case Rules
 1. FilledOrEmptyCaseRule
