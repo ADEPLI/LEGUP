@@ -1,8 +1,10 @@
 Potential Direct/Basic Rules
-1. CompleteSumRule
+1. FinishWithFilledRule
     a. There is only one way, given the previously filled cells, to mark the cells to reach the target sum
-2. FillInEmptiesRule
+    b. This can be replaced with just RequiredFillRule
+2. FinishWithEmptyRule
     a. When the sum is equal to the target sum, fill in the rest of the row/column with empties
+    b. This can be replaced with just RequiredEmptyRule
 3. RequiredFillRule
     a. This cell must be filled in order for this row/column to potentially reach target sum
     b. This rule would be triggered if on a 6x6 grid, the target sum was 18; everything other than 1, 2, and 3 must be filled
@@ -15,15 +17,14 @@ Potential Contradiction Rules
 1. ExceededSumRule/SumTooLargeRule
     a. If the sum of the row/column exceeds the target sum, this path is invalid
     b. Could make it so even if the row/column isn't filled, the rule will still trigger as if the rest of the blank cells were empty
-    c. Needs you to be able to select an entire row/column (maybe)
+    c. Needs you to be able to select an entire row/column
 2. IncompleteSumRule/SumTooSmallRule
     a. If the row/column is filled but the sum is not equal to the target sum, this path is invalid
     b. Could make it so even if the row/column isn't filled, the rule will still trigger as if the rest of the blank cells were filled
-    c. Also needs you to be able to select an entire row/column (maybe)
+    c. Also needs you to be able to select an entire row/column
+3. UnreachableSumRule
+    a. If the available unknown tiles cannot possibly add up to the value remaining for the clue
 
 Potential Case Rules
 1. FilledOrEmptyCaseRule
     a. Branches off into two states, one where it's filled and one where it's empty
-
-If you want to play the game and learn the rules:
-https://www.puzzle-kakurasu.com/
